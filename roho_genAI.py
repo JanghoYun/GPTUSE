@@ -58,8 +58,8 @@ def getImageURLFromDALLE(topic,mood):
     response = openai.Image.create(
         prompt=prompt_,
         n=1,
-        size="512x512",
-        model ="dall-e-2",
+        size="1024x1024",
+        model ="dall-e-3",
         
 
         )
