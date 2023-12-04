@@ -22,7 +22,7 @@ def google_trans(messages):
 def askGPT(prompt):
     message_prompt =[{"role":"system", "content":prompt}]
     response = openai.ChatCompletion.create(model='gpt-3.5-turbo',messages=message_prompt)
-    getresponse = response["choice"][0],["message"]["content"]
+    getresponse = response["choices"][0],["message"]["content"]
     return getresponse
 
 
@@ -58,8 +58,8 @@ def getImageURLFromDALLE(topic,mood):
     response = openai.Image.create(
         prompt=prompt_,
         n=1,
-        size="1024x1024",
-        model ="dall-e-3",
+        size="512x512",
+        model ="dall-e-2",
         
 
         )
