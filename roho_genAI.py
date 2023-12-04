@@ -22,7 +22,7 @@ def google_trans(messages):
 def askGPT(prompt):
     message_prompt =[{"role":"system", "content":prompt}]
     response = openai.ChatCompletion.create(model='gpt-3.5-turbo',messages=message_prompt)
-    getresponse = response["choices"][0],["message"]["content"]
+    getresponse = response["choices"][0]["message"]["content"]
     return getresponse
 
 
